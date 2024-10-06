@@ -1,11 +1,12 @@
 name: manual
-on: workflow_dispatch #手動実行名
-  inputs:
-    greeting: #入力パラメータ名
-      type: string
-      default: Hello
-      required: true
-      description: 
+on:
+  workflow_dispatch:  #手動実行
+    inputs:
+      greeting: #入力パラメータ名
+        type: string
+        default: Hello
+        required: true
+        description: 
 jobs:
   hello:
     runs-on: ubuntu-latest
