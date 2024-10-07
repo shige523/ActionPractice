@@ -12,5 +12,5 @@ jobs:
       - run: echo "${GITHUB_ACTION_REPOSITORY}"
       - run: echo "${GITHUB_ACTIONS}"
       - run: echo "${GITHUB_ACTOR}"
-      - run: echo "${GITHUB_ACTOR_IS}"
+      - run: echo "${GITHUB_ACTOR_ID}"
       - run: echo "${ACTORID}"
