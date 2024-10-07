@@ -1,0 +1,8 @@
+name: display all git environment
+on:
+  workflow_dispatch:  #手動実行
+jobs:
+  display-gitenv:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${GITHUB_ACTION}"
