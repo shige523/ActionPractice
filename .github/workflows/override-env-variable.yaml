@@ -8,5 +8,5 @@ jobs:
     steps:
       - run: echo "${EXAMPLES}"
       - env:
-        EXAMPLES defined by step level # stepレベルで環境変数をoverrideする
+          EXAMPLE: defined by step level # stepレベルで環境変数をoverrideする
         run : echo "${EXAMPLES}"
