@@ -6,3 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "${GITHUB_ACTION}"
+      - run: echo "${GITHUB_ACTION_PATH}"
+      - run: echo "${GITHUB_ACTION_REPOSITORY}"
