@@ -4,5 +4,5 @@ on:
 jobs:
   display-gitenv:
     runs-on: ubuntu-latest
-  steps:
-    - run: echo "${GITHUB_ACTION}"
+    steps:
+      - run: echo "${GITHUB_ACTION}"
