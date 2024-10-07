@@ -4,9 +4,9 @@ jobs:
   run:
     runs-on: ubuntu-latest
     env:
-      BRANCH: main
+      BRANCH: main #環境変数の定義
     steps:
-      - run: echo "${BRANCH}" #環境変数の定義
+      - run: echo "${BRANCH}"
       - uses: actions/checkout@v4
         with:
           ref: ${{ env.BRANCH }}
