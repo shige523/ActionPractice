@@ -1,0 +1,10 @@
+name: display all git environment
+on:
+  workflow_dispatch:  #手動実行
+jobs:
+  use-variables:
+    runs-on: ubuntu-latest
+    env:
+      USERNAME: ${{ vars.USERNAME}} # リポジトリに設定したVariablesの参照
+    steps:
+      - run: echo "${USERNAME}"
