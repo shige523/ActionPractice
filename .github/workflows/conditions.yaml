@@ -12,4 +12,4 @@ jobs:
     steps:
       - run: exit 1 # 終了ステータス1（errorで終了
       - run: echo "hello"
-        if: ${{ failue() }} #エラーが発生しても実行される
+        if: ${{ failure() }} #エラーが発生しても実行される
