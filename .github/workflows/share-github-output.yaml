@@ -6,7 +6,7 @@ jobs:
   share:
     runs-on: ubuntu-latest
     steps:
-      - id: sourse #stepidを指定
+      - id: source #stepidを指定
         run: echo "result hello" >> "${GIHTUB_OUTPUT}" # GIHTUB_OUTPUTに出力
       - env:
           RESULT: ${{ steps.source.outputs.result }} # stepsコンテキストから参照
