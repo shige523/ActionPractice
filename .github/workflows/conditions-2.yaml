@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "hello1"
-    run:
+  run:
     runs-on: ubuntu-latest
     steps:
       - run: echo ${{ github.actor }}
