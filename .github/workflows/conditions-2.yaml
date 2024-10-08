@@ -1,0 +1,13 @@
+name: Conditons2
+on:
+  workflow_dispatch:
+jobs:
+  skip-or-run:
+    if: ${{ github.actor == 'octocat' }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello1"
+    run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.actor }}
