@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: source #stepidを指定
-        run: echo "result=hello" >> "${GITHUB_OUTPUT}" # GIHTUB_OUTPUTに出力
+        run: echo "result=hello" >> "$GITHUB_OUTPUT" # GIHTUB_OUTPUTに出力
       - env:
           RESULT: ${{ steps.source.outputs.result }} # stepsコンテキストから参照
         run: echo "${RESULT}"
