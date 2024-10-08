@@ -7,3 +7,9 @@ jobs:
     steps:
       - run: echo "hello"
         if: ${{ contains(github.run_id, '1') }}
+  fail:
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 1 # 終了ステータス1（errorで終了
+      - run: echo "hello"
+        if: ${{ failue() }} #エラーが発生しても実行される
