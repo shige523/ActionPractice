@@ -1,9 +1,10 @@
 name: Conditons2
+run-name: Run by ${{ github.actor }} # workflow実行名
 on:
   workflow_dispatch:
 jobs:
   skip-or-run:
-    if: ${{ github.actor == 'octocat' }}
+    if: ${{ github.actor == 'octocat' }} #最初に分岐することでジョブをスキップすることが可能
     runs-on: ubuntu-latest
     steps:
       - run: echo "hello1"
