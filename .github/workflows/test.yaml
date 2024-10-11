@@ -1,0 +1,13 @@
+name: go-test
+on:
+	pull_requesut:
+		paths: ['go/**/.go'] #goファイルの変更時のみ
+jobs:
+	test:
+    runs-on: ubuntu-latest
+    steps:
+      - use: actions/checkout@v4 # コードのチェックアウト
+      - use: actions/setup-go@v5 # 言語のセットアップ
+        with:
+          go-version: '1.22'
+      - run: go test go/excellent/*.go
