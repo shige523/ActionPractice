@@ -10,10 +10,10 @@ repos:
     -   id: check-added-large-files
 - repo: local
   hooks:
-    - id: actionlint
+    - id: actionlint-docker
       name: actionlint via Docker
       description: Run actionlint in Docker container
-      entry: docker run --rm -v $(pwd):/workdir -w /workdir rhysd/actionlint:latest
-      language: system
+      entry: docker.io/rhysd/actionlint:1.7.3
+      language: docker_image
       types: [yaml]
-      files: ^\.github/workflows/.*\.ya?ml$
+      files: ^\.github/workflows/
