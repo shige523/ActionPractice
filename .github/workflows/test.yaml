@@ -1,6 +1,6 @@
 name: go-test
 on:
-	pull_requesut:
+	pull_request:
 		paths: ['go/**/.go'] #goファイルの変更時のみ
 jobs:
 	test:
