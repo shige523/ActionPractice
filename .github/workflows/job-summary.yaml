@@ -1,0 +1,9 @@
+name: job-summary
+on: push
+jobs:
+  job-summary:
+    runs-on: ubuntu-latest
+    steps:
+      - name: summary
+        run: | #マークダウンテキストでジョブサマリーを作成
+          echo "## example titile :rocket:"
