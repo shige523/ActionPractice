@@ -6,4 +6,8 @@ jobs:
     steps:
       - name: summary
         run: | #マークダウンテキストでジョブサマリーを作成
-          echo "## example titile :rocket:"
+          {
+            echo "## example titile :rocket:"
+            echo "- frist line"
+            echo "- second line"
+          } >> "${GITHUB_STEP_SUMMARY}"
