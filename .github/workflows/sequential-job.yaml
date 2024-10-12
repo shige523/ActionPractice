@@ -13,3 +13,8 @@ jobs:
     needs: [first]
     steps:
       - run: echo "${{ needs.first.outputs.result }} - BYE"
+  final:
+    runs-on: ubuntu-latest
+    needs: [first]
+    steps:
+      - run: echo "${{ needs.first.outputs.result }} - BYE-BYE"
