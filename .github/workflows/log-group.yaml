@@ -1,0 +1,16 @@
+name: Log Group
+on: push
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: aiueo
+        run: |
+          echo "::group::Show environment variables"
+          printenv
+          echo "::endgroup::"
+      - name: kakikukeko
+        run: |
+          echo "::group::Show environment variables"
+          echo "kakikukeko"
+          echo "::endgroup::"
