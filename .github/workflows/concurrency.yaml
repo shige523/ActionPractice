@@ -1,5 +1,6 @@
 name: Concurrency
-on: push
+on:
+  workflow_dispatch
 concurrency: ${{ github.workflow }} #Concurrency グループへワークフロー名を指定。同じワークフローの多重起動を抑止
 jobs:
   sleeps:

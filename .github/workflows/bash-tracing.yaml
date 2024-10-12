@@ -1,5 +1,5 @@
 name: bash-tracing
-on: push
+on: workflow_dispatch
 
 jobs:
   bash-tracing:
