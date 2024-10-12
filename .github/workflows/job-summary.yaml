@@ -1,5 +1,5 @@
 name: job-summary
-on: push
+on: workflow_dispatch
 jobs:
   job-summary:
     runs-on: ubuntu-latest
