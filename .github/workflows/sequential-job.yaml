@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [first]
     steps:
-      - run: echo "${{ needs.first.outputs.result }} - BYE" >> "${GITHUB_OUTPUT}"
+      - run: echo "result=${{ needs.first.outputs.result }} - BYE" >> "${GITHUB_OUTPUT}"
         id: second
     outputs:
       result: ${{ steps.second.outputs.result }} #jobレベルの出力値
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [first]
     steps:
-      - run: echo "${{ needs.first.outputs.result }} - BYE - BYE" >> "${GITHUB_OUTPUT}"
+      - run: echo "result=${{ needs.first.outputs.result }} - BYE - BYE" >> "${GITHUB_OUTPUT}"
         id: third
     outputs:
       result: ${{ steps.third.outputs.result }} #jobレベルの出力値
