@@ -3,15 +3,15 @@ description: |
   環境変数とgithubコンテキストをログに出力します。
   ワークフローのデバッグに使用できます。
 inputs: #アクションの入力
-  enable-context:
-    default: 'true'
-    required: false
+  enable-context: #入力ID
+    default: 'true' #入力のデフォルト値
+    required: false #必須
     description: コンテキスト路黒出力するか
 outputs: #アクションの出力
-  dumed-date:
-    value: ${{ steps.current.outputs.date }}
+  dumed-date: #出力ID
+    value: ${{ steps.current.outputs.date }} ##出力ID_STEPのcurrentで出力したGITHUB_OUTPUTの値を指す
     description: ダンプ日時
-runs:
+runs: #actionのメインロジック
   using: composite
   steps:
     - run: printenv | sort
