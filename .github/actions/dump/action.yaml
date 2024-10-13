@@ -14,7 +14,10 @@ outputs: #アクションの出力
 runs: #actionのメインロジック
   using: composite
   steps:
-    - run: printenv | sort
+    - run: |
+        echo "::group::printenv sort"
+        printenv | sort
+        echo "::endgroup::"
       shell: bash
     - run: echo "${CONTEXT}"
       if: ${{ inputs.enable-contetxt == 'true' }}
