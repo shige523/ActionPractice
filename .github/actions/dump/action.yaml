@@ -17,7 +17,7 @@ runs:
     - run: printenv | sort
       shell: bash
     - run: echo "${CONTEXT}"
-      if: ${{ inputs.enable-contetxt == `true` }}
+      if: ${{ inputs.enable-contetxt == 'true' }}
       shell: bash
       env:
         CONTEXT: ${{ toJSON(github) }}
