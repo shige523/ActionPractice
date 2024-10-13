@@ -3,7 +3,7 @@ description: |
   環境変数とgithubコンテキストをログに出力します。
   ワークフローのデバッグに使用できます。
 inputs: #アクションの入力
-  enable-contetxt:
+  enable-context:
     default: "true"
     required: false
     description: コンテキスト路黒出力するか
