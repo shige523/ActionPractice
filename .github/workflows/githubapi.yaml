@@ -1,6 +1,7 @@
 name: comment
 on:
-  pull_request:  #pr作成時に実行
+  # pull_request:  #pr作成時に実行
+  workflow_dispatch
 jobs:
   comment:
     runs-on: ubuntu-latest
