@@ -4,4 +4,4 @@ jobs:
   log:
     runs-on: ubuntu-latest
     steps:
-      - uses: action/setup-go@v4
+      - uses: actions/setup-go@v4
