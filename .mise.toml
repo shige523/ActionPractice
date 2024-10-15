@@ -1,2 +1,6 @@
 [tools]
 go = ['latest']
+
+[tasks.branch_cleanup]
+description = "Delete mergerd branch"
+run = "git checkout main;git fetch --prune;git branch --merged | egrep -v '\\*|main' |xargs git branch -d"
