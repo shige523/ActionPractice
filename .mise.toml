@@ -1,5 +1,6 @@
 [tools]
 go = ['latest']
+github-cli = ['latest']
 
 [tasks.branch_cleanup]
 description = "Delete mergerd branch"
