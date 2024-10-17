@@ -13,23 +13,28 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # v1.2.3のようなtagをgitタグから取得する
+      # github.ref_nameはブランチをpushするとブランチ名、tagをpushするとtag名を取得する
       VERSION: ${{ github.ref_name }}
     permissions:
-      contents: write #releaseノートの作成に必要なパーミッション
+      contents: write #releaseノートの作成にはコンテンツスコープへのwrite権限が必要
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
         with:
           go-version: '1.22'
       # goのbuild
+      # ${RUNNER_TEMP}は一時ディレクトリを指す。
+      # buildした実行ファイルの出力先に指定する
       - run: |
           go build -ldflags "-X main.version=${VERSION}" \
             -o "${RUNNER_TEMP}/example"  go/example/main.go
         name: build
       # releasenoteの作成とアセットのアップロード
+      # RUNNER_TEMPに出力した実行ファイルをアーティファクトとしてアップロードする
       - run: |
           gh release create "${VERSION}" --title "${VERSION}" --generate-notes
           gh release upload "${VERSION}" "${RUNNER_TEMP}/example"
         env:
+          # GITHUB-CLIの実行にはクレデンシャルが必要
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         name: release-note
