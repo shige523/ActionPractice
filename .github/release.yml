@@ -1,0 +1,9 @@
+changelog:
+  categories:
+    - title: Enhancement #relasenoteにEnchancementのカテゴリを作成する
+      labels:
+        - enhancement #Enhancementへ気一切するプルリクエストのラベルを指定する
+    - title: Bug Fixes
+      labels:
+        - bug
+        - fix
